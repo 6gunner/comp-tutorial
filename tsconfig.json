@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "ESNext",
+    "module": "es6",
+    "moduleResolution": "node",
+    "lib": ["es5", "dom"],
+    "importHelpers": true,
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "components"],
+  "exclude": ["node_modules", "lib", "es", "**/__tests__/**", "tests"]
+}
