@@ -1,6 +1,5 @@
 import React from 'react';
 import { Alert } from '@easy/comp-tutorial';
-// import "@easy/comp-tutorial/esm/alert/style";
 
 function BasicDemo() {
   return (

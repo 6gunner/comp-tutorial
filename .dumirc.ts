@@ -13,8 +13,15 @@ export default defineConfig({
       "import", // 利用babel-plugin-import来导入样式
       {
         libraryName: "@easy/comp-tutorial",
-        libraryDirectory: '',
-        customStyleName: (name: string) => path.resolve(__dirname, `src/${name}/style/index.ts`),
+        libraryDirectory: "",  // default: lib
+        customStyleName: (name: string) => { // 自定义导入样式的位置
+          console.log(`name = `, name);
+          name = name.toLocaleLowerCase();
+          const result = path.resolve(__dirname, `src/${name}/style/index.ts`);
+          console.log(`result = `, result);
+          return result;
+        },
+        // style: true,
       },
     ],
   ],

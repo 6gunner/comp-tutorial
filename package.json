@@ -45,15 +45,19 @@
     "typescript": "^5.4.3",
     "yarn": "^1.22.22"
   },
-  "typings": "./lib/index.d.ts",
-  "main": "./lib/index.cjs",
-  "module": "./esm/index.js",
+  "typings": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
   "exports": {
     ".": {
-      "require": "./lib/index.cjs",
+      "require": "./lib/index.js",
       "import": "./esm/index.js"
     }
   },
+  "files": [
+    "lib",
+    "esm"
+  ],
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -62,6 +66,7 @@
     "dist/*",
     "esm/**/style/*",
     "lib/**/style/*",
+    "src/**/style/*",
     "*.less"
   ],
   "lint-staged": {

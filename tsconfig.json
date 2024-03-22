@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@easy/comp-tutorial": ["src/index.ts"],
-      "style/*": ["src/style/*"] // 设置别名路径
+      "style/*": ["src/style/*"], // 设置别名路径
+      "@@/*": [".dumi/tmp/*"]
     },
     "target": "ESNext",
     "module": "es6",
@@ -19,12 +20,5 @@
     "skipLibCheck": true
   },
   "include": ["src", "typings.d.ts"],
-  "exclude": [
-    "node_modules",
-    "lib",
-    "es",
-    "src/**/demo/**",
-    "**/__tests__/**",
-    "tests"
-  ]
+  "exclude": ["node_modules", "lib", "esm", "dist", "**/__tests__/**", "tests"]
 }
