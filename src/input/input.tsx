@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
-class Input extends Component<any, any> {
-  props: any;
-
+type InputProps = {
+  onChange: (e) => void;
+};
+class Input extends Component<InputProps, any> {
   constructor(props) {
     super(props);
   }

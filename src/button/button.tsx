@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 
-class Button extends Component<any, any> {
-  props: any;
-
+type ButtonProps = {
+  onClick?: (e) => void;
+} & React.PropsWithChildren;
+class Button extends Component<ButtonProps, any> {
   constructor(props) {
     super(props);
   }
 
-  handleClick = () => {
+  handleClick = (e) => {
     const { onClick } = this.props;
     if (onClick) {
-      onClick();
+      onClick(e);
     }
   };
 

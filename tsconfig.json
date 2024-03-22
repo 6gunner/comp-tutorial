@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "paths": {
+      "@easy/comp-tutorial": ["src/index.ts"],
+      "style/*": ["src/style/*"] // 设置别名路径
+    },
     "target": "ESNext",
     "module": "es6",
     "moduleResolution": "node",
@@ -10,8 +14,17 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "lib",
     "skipLibCheck": true
   },
-  "include": ["src", "components"],
-  "exclude": ["node_modules", "lib", "es", "**/__tests__/**", "tests"]
+  "include": ["src", "typings.d.ts"],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "src/**/demo/**",
+    "**/__tests__/**",
+    "tests"
+  ]
 }

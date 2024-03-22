@@ -1,7 +1,7 @@
 module.exports = {
   presets: ["@babel/env", "@babel/typescript", "@babel/react"],
   plugins: [
-    "@babel/plugin-transform-runtime", // 不引入polyfill，让使用者自己去配置
+    "@babel/plugin-transform-runtime", // 不引入polyfill，让使用者自己去配置，参考https://github.com/worldzhao/blog/issues/5
     // [
     //   "@babel/plugin-transform-runtime",
     //   {
