@@ -1,18 +1,25 @@
 {
-  "name": "@easy/comp-tutorial",
-  "version": "1.0.0",
+  "name": "@easy-comps/comp-tutorial",
+  "version": "0.0.0",
   "description": "",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "clean": "rimraf lib esm dist",
     "build": "npm run clean && npm run build:types && gulp",
     "build:types": "tsc -p tsconfig.build.json && cp -r lib esm",
     "dev": "dumi dev",
     "build:site": "rimraf doc-site && dumi build",
-    "preview:site": "npm run build:site && serve doc-site"
+    "preview:site": "npm run build:site && serve doc-site",
+    "prepublishOnly": "npm run build",
+    "release": "np --no-cleanup --no-tests --any-branch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.24.1",
     "@babel/plugin-transform-runtime": "^7.24.1",
@@ -21,10 +28,9 @@
     "@babel/preset-typescript": "^7.24.1",
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
-    "@types/react": "^18.2.67",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^16.8.0",
+    "@types/react-dom": "^16.8.0",
     "@umijs/fabric": "^4.0.1",
-    "add": "^2.0.6",
     "autoprefixer": "^10.4.18",
     "babel-plugin-import": "^1.13.8",
     "commitizen": "^4.3.0",
@@ -39,6 +45,8 @@
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.37",
     "prettier": "^3.2.5",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "rimraf": "^5.0.5",
     "serve": "^14.2.1",
     "through2": "^4.0.2",
@@ -58,9 +66,9 @@
     "lib",
     "esm"
   ],
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "sideEffects": [
     "dist/*",

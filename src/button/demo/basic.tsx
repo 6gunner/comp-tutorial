@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@easy/comp-tutorial';
-// import '@easy/comp-tutorial/esm/alert/style';
+import { Button } from '@easy-comps/comp-tutorial';
 
 function BasicDemo() {
   return (

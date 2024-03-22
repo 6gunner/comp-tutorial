@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@easy/comp-tutorial": ["src/index.ts"],
+      "@easy-comps/comp-tutorial": ["src/index.ts"],
       "style/*": ["src/style/*"], // 设置别名路径
       "@@/*": [".dumi/tmp/*"]
     },

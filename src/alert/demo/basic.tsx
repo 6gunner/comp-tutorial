@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert } from '@easy/comp-tutorial';
+import { Alert } from '@easy-comps/comp-tutorial';
 
 function BasicDemo() {
   return (

@@ -12,7 +12,7 @@ export default defineConfig({
     [
       "import", // 利用babel-plugin-import来导入样式
       {
-        libraryName: "@easy/comp-tutorial",
+        libraryName: "@easy-comps/comp-tutorial",
         libraryDirectory: "",  // default: lib
         customStyleName: (name: string) => { // 自定义导入样式的位置
           console.log(`name = `, name);
